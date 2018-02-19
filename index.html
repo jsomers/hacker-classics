@@ -52,12 +52,12 @@
       <td style="width:18px;padding-right:4px"><a href="https://news.ycombinator.com"><img src="https://news.ycombinator.com/y18.gif" width="18" height="18" style="border:1px white solid;"></a></td>
       <td style="line-height:12pt; height:10px;"><span class="pagetop">
         <b class="hnname"><a href="/">The Hacker Classics</a></b>
-        <a href="https://news.ycombinator.com/newest">new</a> |
-        <a href="https://news.ycombinator.com/newcomments">comments</a> |
-        <a href="https://news.ycombinator.com/show">show</a> |
-        <a href="https://news.ycombinator.com/ask">ask</a> |
-        <a href="https://news.ycombinator.com/jobs">jobs</a> |
-        <a href="https://news.ycombinator.com/submit">submit</a>
+        <a target="_blank" href="https://news.ycombinator.com/newest">new</a> |
+        <a target="_blank" href="https://news.ycombinator.com/newcomments">comments</a> |
+        <a target="_blank" href="https://news.ycombinator.com/show">show</a> |
+        <a target="_blank" href="https://news.ycombinator.com/ask">ask</a> |
+        <a target="_blank" href="https://news.ycombinator.com/jobs">jobs</a> |
+        <a target="_blank" href="https://news.ycombinator.com/submit">submit</a>
       </span></td>
     </tr></table>
   </td></tr>
@@ -78,14 +78,14 @@
   <td align="right" valign="top" class="title"><span class="rank">§.</span></td> 
   <td valign="top" class="votelinks"><center>&nbsp;</center></td>
   <td class="title">
-    <a href="${story_url}" class="storylink">${story.title}</a>
-    <span class="sitebit comhead" style="display: ${domain_display}"> (<a href="https://news.ycombinator.com/from?site=${domain}"><span class="sitestr">${domain}</span></a>)</span>
+    <a href="${story_url}" target="_blank" class="storylink">${story.title}</a>
+    <span class="sitebit comhead" style="display: ${domain_display}"> (<a href="https://news.ycombinator.com/from?site=${domain}" target="_blank"><span class="sitestr">${domain}</span></a>)</span>
   </td>
 </tr>
 <tr><td colspan="2"></td><td class="subtext">
   <span class="score" id="score_${i}">${story.points} points</span> by <a href="https://news.ycombinator.com/user?id=${story.author}" class="hnuser">${story.author}</a> 
-  <span class="age"><a href="https://news.ycombinator.com/item?id=${story.objectID}">${ago(story.created_at)}</a></span> <span id="unv_16413917"></span> | 
-  <a href="https://news.ycombinator.com/item?id=${story.objectID}">${story.num_comments}&nbsp;comments</a>
+  <span class="age"><a href="https://news.ycombinator.com/item?id=${story.objectID}"  target="_blank">${ago(story.created_at)}</a></span> <span id="unv_16413917"></span> | 
+  <a href="https://news.ycombinator.com/item?id=${story.objectID}"  target="_blank">${story.num_comments}&nbsp;comments</a>
 </td></tr>
 <tr class="spacer" style="height:5px"></tr>
 `;
