@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style> 
+  </style>
+</head>
+
+<script>
+  var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+  };
+  
+  getJSON("stories.json", function(err, data) {
+    console.log(data);
+  })
+    
+  // var process = function(data) {
+  //   console.log(data);
+  //   document.getElementById("loader").style.display = 'none';
+  //   var str = "<ul>";
+  //   for (var i in data.hits) {
+  //     str += "<li>" + data.hits[i].title + " (" + data.hits[i].points + ")</li>";
+  //   }
+  //   str += "</ul>"
+  //   document.getElementById("results").innerHTML = str;
+  // }
+  //
+  // var script = document.createElement('script');
+  // script.src = "https://hn.algolia.com/api/v1/search?tags=story&query='(1999)'&page=10&callback=process"
+  //
+  // document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+  
+  <div id="container">
+  <img src="loader.gif" id="loader">
+  <div id="results"></div>
+  </div>
+  
+</html>
