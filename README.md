@@ -7,3 +7,5 @@ The "Hacker Classics" are the gems that occasionally surface on news.yc when a g
 It includes all stories with more than 40 points whose title has a year in parens, like "(1990)", which is the HN convention for classic articles. The database starts at 1900 and goes to 2010. The stories are fetched using the [Algolia HN search API](https://hn.algolia.com/api) and stored in a `stories.json` file next to the index page.
 
 The page itself is built client-side at load time.
+
+![image](https://user-images.githubusercontent.com/21294/36396257-14950094-158b-11e8-9f6e-ecab9e308602.png)
