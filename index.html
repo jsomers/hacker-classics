@@ -70,14 +70,16 @@
           var story = data[yr][i];
           if (seen_titles[story.title]) continue;
           seen_titles[story.title] = 1;
-          var domain = hostname(story.url);
+          var story_url = story.url || ("https://news.ycombinator.com/item?id=" + story.objectID);
+          var domain_display = story.url ? 'inline' : 'none';
+          var domain = hostname(story_url);
           html += `
 <tr class='athing' id='${i}'>
   <td align="right" valign="top" class="title"><span class="rank">§.</span></td> 
   <td valign="top" class="votelinks"><center>&nbsp;</center></td>
   <td class="title">
-    <a href="${story.url}" class="storylink">${story.title}</a>
-    <span class="sitebit comhead"> (<a href="https://news.ycombinator.com/from?site=${domain}"><span class="sitestr">${domain}</span></a>)</span>
+    <a href="${story_url}" class="storylink">${story.title}</a>
+    <span class="sitebit comhead" style="display: ${domain_display}"> (<a href="https://news.ycombinator.com/from?site=${domain}"><span class="sitestr">${domain}</span></a>)</span>
   </td>
 </tr>
 <tr><td colspan="2"></td><td class="subtext">
