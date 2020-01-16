@@ -97,6 +97,20 @@
     };
     html += '</table></td></tr></table></td></tr>';
     document.getElementById("placeholder").innerHTML = html;
+    
+    // Restore previous scroll position from localStorage on load
+    if (localStorage.hc_scroll_y) {
+      window.scrollTo(window.scrollX, parseInt(localStorage.hc_scroll_y));
+    }
+    // Save scroll position
+    window.addEventListener(
+      'scroll',
+      () => {
+        localStorage.hc_scroll_y = window.scrollY;
+      }, 
+      { passive: true }
+    );
+    
   })
 </script>
 
